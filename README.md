@@ -1,8 +1,9 @@
 # Shortcodes for Craft CMS
 
-A port of Wordpress shortcode functionality for Craft CMS.
+This is a port of Wordpress shortcode functions for Craft CMS.
 
 This plugin allows you to register shortcode callbacks in your own custom plugins.
+Better code docs will come, but it's very simple to understand by glancing at the code.
 Suggestions and pull requests are very welcome.
 
 ## Usage
