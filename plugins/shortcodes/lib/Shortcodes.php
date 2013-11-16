@@ -1,6 +1,12 @@
 <?php
 namespace Craft;
 
+/**
+ * This class is an encapsulation of Wordpress shortcode functions. 
+ * The documentation has been left mostly intact however it may not 
+ * be relevant to the Craft CMS environment.
+ */
+
 Class Shortcodes {
 
 	/**
