@@ -2,8 +2,8 @@
 namespace Craft;
 
 /**
- * This class is an encapsulation of Wordpress shortcode functions. 
- * The documentation has been left mostly intact however it may not 
+ * This class is an encapsulation of Wordpress shortcode functions.
+ * The documentation has been left mostly intact however it may not
  * be relevant to the Craft CMS environment.
  */
 
@@ -161,7 +161,7 @@ Class Shortcodes {
 		// WARNING! Do not change this regex without changing do_shortcode_tag() and strip_shortcode_tag()
 		// Also, see shortcode_unautop() and shortcode.js.
 		return
-			  '\\['                              // Opening bracket
+				'\\['                              // Opening bracket
 			. '(\\[?)'                           // 1: Optional second opening bracket for escaping shortcodes: [[tag]]
 			. "($tagregexp)"                     // 2: Shortcode name
 			. '(?![\\w-])'                       // Not followed by word character or hyphen
@@ -282,7 +282,7 @@ Class Shortcodes {
 
 		/**
 		 * ### This is uniquely WP ###
-		 * 
+		 *
 		 * Filter a shortcode's default attributes.
 		 *
 		 * If the third parameter of the shortcode_atts() function is present then this filter is available.
@@ -314,9 +314,9 @@ Class Shortcodes {
 		if (empty(static::$shortcode_tags) || !is_array(static::$shortcode_tags))
 			return $content;
 
-		$pattern = get_shortcode_regex();
+		$pattern = static::get_shortcode_regex();
 
-		return preg_replace_callback( "/$pattern/s", 'strip_shortcode_tag', $content );
+		return preg_replace_callback( "/$pattern/s", 'static::strip_shortcode_tag', $content );
 	}
 
 	public static function strip_shortcode_tag( $m ) {
