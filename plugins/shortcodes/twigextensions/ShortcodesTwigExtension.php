@@ -12,12 +12,18 @@ class ShortcodesTwigExtension extends \Twig_Extension
 
 	public function getFilters()
 	{
-		return array('shortcodes' => new \Twig_Filter_Method($this, 'shortcodes'));
+		return array(
+			'shortcodes' => new \Twig_Filter_Method($this, 'shortcodes'),
+			'stripShortcodes' => new \Twig_Filter_Method($this, 'stripShortcodes')
+		);
 	}
 
 	public function getFunctions()
 	{
-		return array('shortcodes' => new \Twig_Function_Method($this, 'shortcodes'));
+		return array(
+			'shortcodes' => new \Twig_Function_Method($this, 'shortcodes'),
+			'stripShortcodes' => new \Twig_Function_Method($this, 'stripShortcodes')
+			);
 	}
 
 	public function initRuntime(\Twig_Environment $env)
@@ -42,5 +48,9 @@ class ShortcodesTwigExtension extends \Twig_Extension
 		}
 
 		return $content;
+	}
+
+	public function stripShortcodes($content) {
+		return Shortcodes::strip_shortcodes($content);
 	}
 }
