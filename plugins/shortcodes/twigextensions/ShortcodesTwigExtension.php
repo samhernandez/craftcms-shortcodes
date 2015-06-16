@@ -20,7 +20,10 @@ class ShortcodesTwigExtension extends \Twig_Extension
 
 	public function getFunctions()
 	{
-		return array('shortcodes' => new \Twig_Function_Method($this, 'shortcodes'));
+		return array(
+			'shortcodes' => new \Twig_Function_Method($this, 'shortcodes'),
+			'stripShortcodes' => new \Twig_Function_Method($this, 'stripShortcodes')
+			);
 	}
 
 	public function initRuntime(\Twig_Environment $env)
