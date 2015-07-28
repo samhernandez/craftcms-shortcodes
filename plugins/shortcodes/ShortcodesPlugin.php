@@ -40,7 +40,7 @@ class ShortcodesPlugin extends BasePlugin
 		}
 	}
 
-	public function hookAddTwigExtension()
+	public function addTwigExtension()
 	{
 		Craft::import('plugins.shortcodes.lib.Shortcodes');
 		Craft::import('plugins.shortcodes.twigextensions.ShortcodesTwigExtension');
