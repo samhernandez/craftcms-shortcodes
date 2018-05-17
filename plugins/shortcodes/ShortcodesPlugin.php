@@ -15,12 +15,12 @@ class ShortcodesPlugin extends BasePlugin
 
 	public function getDeveloper()
 	{
-		return 'Happy Cog';
+		return 'Sam Hernandez';
 	}
 
 	public function getDeveloperUrl()
 	{
-		return 'http://happycog.com';
+		return 'http://samhernandez.me';
 	}
 
 	public function init()
