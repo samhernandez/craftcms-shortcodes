@@ -1,6 +1,6 @@
 # Shortcodes for Craft CMS 2.x
 
-(A Craft 3 version is coming soon!)
+This is for the older version of Craft. Find the Craft 3 version here: https://github.com/samhernandez/craft-shortcodes
 
 This is a port of Wordpress shortcode functions for Craft CMS.
 
